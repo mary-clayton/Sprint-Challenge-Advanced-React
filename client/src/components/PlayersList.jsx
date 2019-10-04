@@ -1,6 +1,10 @@
 import React, {Component} from "react";
 import Players from './Players'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const ListStyle = styled.div ` 
+`
 
 class PlayersList extends Component {
 constructor() {
@@ -24,9 +28,9 @@ axios
 //return
 render() {
     return (
-        <div>
+        <ListStyle className="playerlist">
             <Players player={this.state.players} />
-        </div>
+        </ListStyle>
     )
 }
 }
